@@ -1,0 +1,153 @@
+body,html{
+	height: 100%;
+}
+
+body{
+	padding-top: 56px;
+	overflow-x: hidden;
+	font-family: dederon-sans-web, sans-serif;
+	font-weight: 500;
+	font-style: normal;
+	@media(min-width:768px){
+		padding-top: 0;
+	}
+}
+
+
+strong,b{
+	font-weight: bolder;
+}
+
+em{
+	font-style: italic;
+}
+
+p{
+	margin-bottom: 10px;
+}
+
+article a{
+	color: #2abaf1;
+	text-decoration: underline;
+}
+
+a{
+	font-family: dederon-sans-web, sans-serif;
+	font-weight: 500;
+	font-style: italic;	
+}
+
+.btn{
+	transition: all 0.1s linear;
+	display: inline-block;
+	padding: 8px 20px;
+	background-color: #1ab6f1;
+	border-radius: 6px;
+	color: #fff;
+	font-size: 14px;
+	text-decoration: none ;
+	&:hover{
+		background-color: lighten(#1ab6f1,20%);
+	}
+	@media(min-width:768px){
+		font-size: 18px;
+	}
+}
+
+.btn-dark-blue{
+	background-color: #111b3d;
+	&:hover{
+		background-color: lighten(#111b3d,20%);
+	}
+}
+
+.container{
+	padding: 0 20px;
+	max-width: 1220px;
+	margin: auto;
+}
+
+.overlappedImage{
+	min-height: 80%;
+	padding: 50px 0;
+	color: #ffffff;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	background: center center no-repeat;
+	background-position: center center;
+	background-size: cover;
+	.imageOvellay{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 1;
+		background-image: url(../images/cover-mask.png);
+		background-size: cover;
+		background-position: center bottom;
+	}
+	.sectionContent{
+		position: relative;
+		z-index: 2;
+	}
+}
+
+.flexslider{
+	border: 0;
+	background: none;
+	margin-bottom: 0;
+}
+
+.coverBox{
+	position: relative;
+	overflow: hidden;
+	background: linear-gradient(180deg, #1ab6f1 50%, #FFF 50%);
+	padding-bottom: 40px;
+	.elipses{
+		position: absolute;
+		z-index: 0;
+		left: 0;
+		bottom: 0;
+	}
+	.coverBoxContent{
+		position: relative;
+		z-index: 1;
+		max-width: 1220px;
+		margin: auto;
+		padding: 30px 0px;
+		border-radius: 4px;
+		background-color: #f7f7f7;
+		@media(min-width:1220px){
+			padding: 50px 0px;
+			box-shadow: -10px 10px 0 #1981a9;
+		}
+	}
+}
+
+.lastCta{
+	text-align: center;
+	background: url(../images/home-cta-bg.png) #111b3d center center no-repeat;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-color: #111b3d;
+	background-size: cover;
+	padding: 50px 0;
+	h2{
+		max-width: 640px;
+		margin: auto;
+		color: #ffffff;
+		font-size: 22px;
+		font-weight: 700;
+		margin-bottom: 30px;
+		@media(min-width: 768px){
+			font-size: 36px;
+		}
+	}
+	@media(min-width:768px){
+		padding: 100px 0;
+	}
+}

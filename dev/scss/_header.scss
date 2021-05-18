@@ -1,0 +1,228 @@
+header{
+	transition: all 0.25s linear;
+	position: fixed;
+	z-index: 4;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 3;
+	background-color: #161725;
+	padding: 10px 0;
+	line-height: 1;
+	.container{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-wrap: wrap;
+	}
+	@media(min-width:768px){
+		max-width: 100%;
+		background: none;
+	}
+}
+
+.logoHeader{ 
+	width: 160px;
+	@media(min-width:1024px){
+		width: auto;
+	}
+}
+
+.header--fixed{
+	@media(min-width:768px){
+		background-color: #161725;
+		padding: 0;
+		.logoHeader{ 
+			width: 160px;
+		}
+		#menuDesktop{
+			ul{
+				li{
+					padding: 15px;
+				}
+			}
+			.sub-menu{
+				top: 54px;
+				li{
+					padding: 0;
+				}
+			}
+		}
+	}
+}
+
+.menuMobileItems{
+	display: flex;
+	align-items: center;
+	.hamburguerIcon{
+		color: #1ab6f1;
+		font-size: 36px;
+		font-weight: 400;
+		margin-left: 15px;
+		.fa-times{
+			display: none;
+		}
+	}
+	.phoneIcon{
+		color: #d3f3ff;
+		font-size: 24px;
+		line-height: 36px;
+		font-weight: 400;
+	}
+	@media(min-width:768px){
+		display: none;
+	}
+}
+
+#menuDesktop{
+	display: none;
+	color: #fff;
+	ul{
+		display: flex;
+		align-items: center;
+		li{
+			line-height: 24px;
+			padding: 8px 15px;
+			text-align: center;
+			position: relative;
+			&:hover{
+				background: #3ab1d6;
+				&:after{
+					opacity: 0.8;
+				}
+			}
+			a{
+				position: relative;
+				z-index: 2;
+				font-style: normal;
+			}
+		}
+		.current-menu-item{
+			background: #3ab1d6;
+			&:after{
+				opacity: 0 !important;	
+			}
+		}
+	}
+	.menu-item-has-children{
+		a{
+			&:after{
+				margin-left: 5px;
+				font: normal normal normal 14px/1 FontAwesome;
+				content: "\f107";
+				font-size: 20px;
+			}
+		}
+	}
+	.sub-menu{
+		display: none;
+		position: absolute;
+		top: 40px;
+		left: 0;
+		background: #3ab1d6;
+		color: #fff;
+		font-size: 14px;
+		font-weight: 400;
+		//line-height: 17px;
+		width: 100%;
+		flex-direction: column;
+		li{
+			padding: 0;
+			width: 100%;
+			a{
+				padding: 5px 0;
+				width: 100%;
+				display: block;
+				&:hover{
+					background: #111b3d;
+				}
+			}
+			
+		}
+		a{
+			&:after{
+				content: '';
+			}
+		}
+	}
+	@media(min-width:768px){
+		display: block;
+	}
+}
+
+#menuMobile{
+	position: fixed;
+	z-index: 3;
+	overflow: auto;
+	top: 56px;
+	left: 800px;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(22,23,37, 0.9);
+	transition: all 0.5s ease;
+	color: #ffffff;
+	font-size: 20px;
+	font-weight: 700;
+	text-align: center;
+	ul{
+		li{
+			margin: 20px 0;
+		}
+	}
+	a{
+		font-style: normal;
+	}
+	.menu-item-has-children{
+		a{
+			&:after{
+				margin-left: 10px;
+				font: normal normal normal 14px/1 FontAwesome;
+				content: "\f107";
+				font-size: 20px;
+			}
+		}
+	}
+	.sub-menu{
+		display: none;
+		color: #1ab6f1;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 17px;
+		a{
+			&:after{
+				content: '';
+			}
+		}
+	}
+	.phoneMenuMobile{
+		i{
+			color: #1ab6f1; 
+		}
+	}
+	@media(min-width:768px){
+		display: none;
+	}
+}
+
+.body--MobileMenuVisible{
+	overflow: hidden;
+	header{
+		.menuMobileItems{
+			line-height: 1;
+			.hamburguerIcon{
+				.fa-bars{
+					display: none;
+				}
+				.fa-times{
+					display: block;
+				}
+			}
+		}
+	}
+	
+}
+
+.menuMobile--visible{
+	left: 0 !important;
+}
+

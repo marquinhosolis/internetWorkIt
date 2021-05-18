@@ -1,0 +1,165 @@
+@import 'mixins';
+
+.contactPage{
+	position: relative;
+	z-index: 1;
+	padding: 50px 0;
+	.container{
+		@media(min-width:768px){
+			display: flex;
+			justify-content: space-between;
+			flex-direction: row-reverse;
+			align-items: stretch;
+			flex-wrap: wrap;	
+		}
+	}
+	.contactPageFormWrapper{
+		border-radius: 4px;
+		background-color: rgba(255,255,255,0.9);
+		padding: 30px 20px;
+		//text-align: center;
+		.contactPageTitle{
+			margin-bottom: 10px;
+			color: #111b3d;
+			font-size: 24px;
+			font-weight: 700;
+			line-height: 1;
+			@media(min-width:768px){
+				font-size: 36px;	
+			}
+		}
+		.contactPageIntroCopy{
+			margin-bottom: 20px;
+			color: #111b3d;
+			font-size: 12px;
+			font-weight: 400;
+			@media(min-width:768px){
+				font-size: 14px;	
+			}
+		}
+		.contactPageForm{
+			input, textarea{
+				border-radius: 4px;
+				border: 1px solid #111b3d;
+				width: 100%;
+				padding: 7px 15px;
+				margin-bottom: 8px;
+				font-family: dederon-sans-web, sans-serif;
+				color: #111b3d;
+				font-size: 11px;
+				font-weight: 400;
+			}
+			button{
+				width: 100%;
+				border: 0;
+				font-family: dederon-sans-web, sans-serif;
+				font-size: 11px;
+				font-style: italic;
+			}
+			@media(min-width:768px){
+				input, textarea{
+					font-size: 14px;
+				}
+				button{
+					font-size: 14px;
+				}
+			}
+		}
+		@media(min-width:768px){
+			border-radius: 0 4px 4px 0;
+			width: 50%;
+		}
+		@media(min-width:1200px){
+			width: 55%;
+			padding: 80px 100px;
+		}
+	}
+	.contactPageFormImage{
+		@include aspect-ratio(300, 150);
+		border-radius: 0 0 4px 4px;
+		@media(min-width:768px){
+			width: 50%;
+			border-radius: 4px 0 0 4px;
+		}
+		@media(min-width:1200px){
+			width: 45%;
+		}
+	}
+	
+	.contactPageContacts{
+		margin-top: 20px;
+		border-radius: 4px;
+		background-color: rgba(255,255,255,0.9);
+		padding: 30px 20px;
+		h2{
+			margin-bottom: 25px;
+			color: #111b3d;
+			font-size: 24px;
+			font-weight: 700;
+			text-align: center;
+			&:after{
+				content: "";
+				height: 2px;
+				width: 60px;
+				display: block;
+				margin: auto;
+				margin-top: 10px; 
+				background-color: #1ab6f1;
+			}
+			@media(min-width: 768px){
+				margin-bottom: 0;
+				margin-right: 40px;
+				text-align: left;
+				font-size: 30px;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				&:after{
+					height: 80px;
+					width: 3px;
+					margin-left: 40px;
+				}
+			}
+		}
+		address{
+			a{
+				display: flex;
+				justify-content: flex-start;
+				align-items: center;
+				margin-bottom: 10px;
+				font-size: 15px;
+				font-style: normal;
+				color: #111b3d;
+				i{
+					width: 20px;
+					margin-right: 5px;
+					color: #1ab6f1;
+				}
+				@media(min-width: 768px){
+					font-size: 20px;
+				}
+			}
+			@media(min-width: 768px){
+				font-size: 20px;
+			}
+			@media(min-width: 1024px){
+				display: flex;
+				align-items: center;
+				flex-wrap: wrap;
+				div{
+					margin-right: 25px;
+				}
+			}
+		}
+		@media(min-width: 768px){
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+	
+	@media(min-width:768px){
+		padding: 120px 15px;
+	}
+}
